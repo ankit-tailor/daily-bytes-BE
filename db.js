@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const mongoDbUrl = process.env.mongoDbUrl
 
 const connection = async () => {
-    await mongoose.connect(mongoDbUrl)
+    await mongoose.connect(mongoDbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
         .then(res => {
             console.log("Db connected")
         })
