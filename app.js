@@ -6,7 +6,7 @@ const cors = require('cors');
 const { connection } = require('./db')
 
 const news = require('./routes/news.routes');
-const PORT = process.env.NODE_ENV || 5000;
+const PORT = process.env.PORT || 5000;
 
 // mongodb connection
 connection();
